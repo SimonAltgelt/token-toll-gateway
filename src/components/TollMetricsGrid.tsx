@@ -55,76 +55,73 @@ const MetricCard = ({
 
 const TollMetricsGrid: React.FC = () => {
   return (
-    <div className="mb-8">
-      <h2 className="text-lg font-semibold text-gray-700 mb-3">Weekly Metrics Overview</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <MetricCard
-          title="Tolls and Violations ($)"
-          value="1,250.00"
-          previousValue="1,100.00"
-          prefix="$"
-          color="blue"
-          trend="up"
-        />
-        <MetricCard
-          title="Charged Invoices ($)"
-          value="975.00"
-          previousValue="890.00"
-          prefix="$"
-          color="green"
-          trend="up"
-        />
-        <MetricCard
-          title="Declined Invoices ($)"
-          value="50.00"
-          previousValue="65.00"
-          prefix="$"
-          color="red"
-          trend="down"
-        />
-        <MetricCard
-          title="Contracts Count"
-          value="125"
-          previousValue="118"
-          color="yellow"
-          trend="up"
-        />
-        <MetricCard
-          title="Invoices Count"
-          value="98"
-          previousValue="92"
-          color="blue"
-          trend="up"
-        />
-        <MetricCard
-          title="Invoices w/out CC ($)"
-          value="100.00"
-          previousValue="120.00"
-          prefix="$"
-          color="red"
-          trend="down"
-        />
-        <MetricCard
-          title="% of Contracts with CC Token"
-          value="76%"
-          previousValue="72%"
-          color="green"
-          trend="up"
-        />
-        <MetricCard
-          title="CC Authorization Trend"
-          value="Upward"
-          color="green"
-        />
-        <MetricCard
-          title="Average Tolls ($) / Contract"
-          value="10.00"
-          previousValue="9.32"
-          prefix="$"
-          color="blue"
-          trend="up"
-        />
-      </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <MetricCard
+        title="Tolls and Violations ($)"
+        value="1,250.00"
+        previousValue="1,100.00"
+        prefix="$"
+        color="blue"
+        trend="up"
+      />
+      <MetricCard
+        title="Charged Invoices ($)"
+        value="975.00"
+        previousValue="890.00"
+        prefix="$"
+        color="green"
+        trend="up"
+      />
+      <MetricCard
+        title="Declined Invoices ($)"
+        value="50.00"
+        previousValue="65.00"
+        prefix="$"
+        color="red"
+        trend="down"
+      />
+      <MetricCard
+        title="Contracts Count"
+        value="125"
+        previousValue="118"
+        color="yellow"
+        trend="up"
+      />
+      <MetricCard
+        title="Invoices Count"
+        value="98"
+        previousValue="92"
+        color="blue"
+        trend="up"
+      />
+      <MetricCard
+        title="Invoices w/out CC ($)"
+        value="100.00"
+        previousValue="120.00"
+        prefix="$"
+        color="red"
+        trend="down"
+      />
+      <MetricCard
+        title="% of Contracts with CC Token"
+        value="76%"
+        previousValue="72%"
+        color="green"
+        trend="up"
+      />
+      <MetricCard
+        title="CC Authorization Trend"
+        value="Upward"
+        color="green"
+      />
+      <MetricCard
+        title="Average Tolls ($) / Contract"
+        value="10.00"
+        previousValue="9.32"
+        prefix="$"
+        color="blue"
+        trend="up"
+      />
     </div>
   );
 };
