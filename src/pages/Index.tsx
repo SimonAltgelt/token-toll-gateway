@@ -2,7 +2,6 @@
 import React from 'react';
 import ReportHeader from '@/components/ReportHeader';
 import InvoiceTable from '@/components/InvoiceTable';
-import MetricsCard from '@/components/MetricsCard';
 import AuthGate from '@/components/AuthGate';
 import TollMetricsGrid from '@/components/TollMetricsGrid';
 
@@ -60,9 +59,13 @@ const Index = () => {
           }}
         />
         
-        <TollMetricsGrid />
-        
-        <AuthGate />
+        <div className="mb-8">
+          <div className="flex justify-between items-center mb-3">
+            <h2 className="text-lg font-semibold text-gray-700">Weekly Metrics Overview</h2>
+            <AuthGate />
+          </div>
+          <TollMetricsGrid />
+        </div>
         
         <InvoiceTable 
           title="Missing Credit Card Authorization" 
