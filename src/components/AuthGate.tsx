@@ -11,22 +11,22 @@ const AuthGate: React.FC = () => {
       </div>
       
       <h2 className="text-xl font-bold mb-2 text-gray-800">
-        Authentication Required
+        Premium Report Access
       </h2>
       
       <p className="text-gray-600 mb-6 max-w-lg mx-auto">
-        To view complete toll collection data including AUTH tokens and detailed records, 
-        please log in to your account.
+        To view the full toll collection report with detailed metrics and AUTH tokens, 
+        please sign in to your dashboard.
       </p>
       
       <div className="flex justify-center">
         <Button className="bg-blue-600 hover:bg-blue-700">
-          Log In to View Full Report
+          Sign In for Full Report
         </Button>
       </div>
       
       <p className="text-sm text-gray-500 mt-4">
-        The information displayed is a generic overview for demonstration purposes.
+        This free version shows basic metrics for your convenience.
       </p>
     </div>
   );
