@@ -3,7 +3,6 @@ import React from 'react';
 import ReportHeader from '@/components/ReportHeader';
 import InvoiceTable from '@/components/InvoiceTable';
 import AuthGate from '@/components/AuthGate';
-import TollMetricsGrid from '@/components/TollMetricsGrid';
 
 // Mock data - Using generic information as requested
 const createdInvoices = [
@@ -49,6 +48,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container max-w-7xl mx-auto px-4">
+        <div className="flex justify-end mb-2">
+          <AuthGate />
+        </div>
+        
         <ReportHeader 
           dealership="Generic Dealership"
           dateRange="2025-05-05 to 2025-05-12"
@@ -58,14 +61,6 @@ const Index = () => {
             declined: "$50.00"
           }}
         />
-        
-        <div className="mb-8">
-          <div className="flex justify-between items-center mb-3">
-            <h2 className="text-lg font-semibold text-gray-700">Weekly Metrics Overview</h2>
-            <AuthGate />
-          </div>
-          <TollMetricsGrid />
-        </div>
         
         <InvoiceTable 
           title="Missing Credit Card Authorization" 

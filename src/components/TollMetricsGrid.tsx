@@ -18,10 +18,10 @@ const MetricCard = ({
 }) => {
   return (
     <Card className="border border-gray-100 bg-white">
-      <CardContent className="p-4">
-        <h3 className="text-sm text-gray-600 font-medium mb-1">{title}</h3>
+      <CardContent className="py-2 px-3">
+        <h3 className="text-xs text-gray-600 font-medium">{title}</h3>
         <div className="flex justify-between items-end">
-          <div className={`text-2xl font-bold ${isPositive ? 'text-purple-600' : 'text-red-600'}`}>
+          <div className={`text-lg font-bold ${isPositive ? 'text-purple-600' : 'text-red-600'}`}>
             {prefix}{value}
           </div>
           {previousValue && (
@@ -30,7 +30,7 @@ const MetricCard = ({
                 <ArrowUpIcon className="h-3 w-3 text-purple-500 mr-1" /> : 
                 <ArrowDownIcon className="h-3 w-3 text-red-500 mr-1" />
               }
-              <span>{previousValue} (previous)</span>
+              <span>{previousValue}</span>
             </div>
           )}
         </div>
@@ -41,30 +41,27 @@ const MetricCard = ({
 
 const TollMetricsGrid: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
       <MetricCard
-        title="Charged Invoices ($)"
-        value="975.00"
-        previousValue="890.00"
-        prefix="$"
+        title="Charged Invoices"
+        value="$975.00"
+        previousValue="$890.00"
         isPositive={true}
       />
       <MetricCard
-        title="Declined Invoices ($)"
-        value="50.00"
-        previousValue="65.00"
-        prefix="$"
+        title="Declined Invoices"
+        value="$50.00"
+        previousValue="$65.00"
         isPositive={false}
       />
       <MetricCard
-        title="Invoices w/out CC ($)"
-        value="100.00"
-        previousValue="120.00"
-        prefix="$"
+        title="Invoices w/out CC"
+        value="$100.00"
+        previousValue="$120.00"
         isPositive={false}
       />
       <MetricCard
-        title="% Contracts with CC Token"
+        title="% CC Tokens"
         value="76%"
         previousValue="72%"
         isPositive={true}
