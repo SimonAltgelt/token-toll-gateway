@@ -3,7 +3,6 @@ import React from 'react';
 import ReportHeader from '@/components/ReportHeader';
 import InvoiceTable from '@/components/InvoiceTable';
 import AuthGate from '@/components/AuthGate';
-import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 
 // Mock data - Using generic information as requested
@@ -48,11 +47,10 @@ const declinedInvoices = [
 
 const MinimalContactSection = () => {
   return (
-    <div className="bg-gray-50 border border-gray-100 rounded-lg p-4 mt-6 mb-4 text-center">
-      <div className="flex items-center justify-center gap-2 text-sm">
-        <Mail className="h-4 w-4 text-gray-600" />
-        <span className="text-gray-600">Need help?</span>
-        <a href="mailto:support@genericdealership.com" className="text-blue-600 hover:underline">
+    <div className="bg-gray-50 border border-gray-100 rounded-lg p-2 mt-6 mb-4 text-center">
+      <div className="flex items-center justify-center gap-2 text-xs">
+        <Mail className="h-3 w-3 text-gray-600" />
+        <a href="mailto:support@genericdealership.com" className="text-blue-900 hover:underline">
           support@genericdealership.com
         </a>
       </div>

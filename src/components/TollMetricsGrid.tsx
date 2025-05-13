@@ -21,14 +21,14 @@ const MetricCard = ({
       <CardContent className="py-2 px-3">
         <h3 className="text-xs text-gray-600 font-medium">{title}</h3>
         <div className="flex justify-between items-end">
-          <div className={`text-lg font-bold ${isPositive ? 'text-blue-600' : 'text-red-600'}`}>
+          <div className={`text-lg font-bold ${isPositive ? 'text-blue-900' : 'text-red-600'}`}>
             {prefix}{value}
           </div>
           {previousValue && (
             <div className="flex items-center text-xs text-gray-500">
               {isPositive ? 
-                <ArrowUpIcon className="h-3 w-3 text-blue-500 mr-1" /> : 
-                <ArrowDownIcon className="h-3 w-3 text-red-500 mr-1" />
+                <ArrowUpIcon className="h-3 w-3 text-blue-900 mr-1" /> : 
+                <ArrowDownIcon className="h-3 w-3 text-red-600 mr-1" />
               }
               <span>{previousValue}</span>
             </div>
